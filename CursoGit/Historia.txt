@@ -1,0 +1,9 @@
+Hola 
+Este es el primer archivo git
+Pero esta linea es nueva para la versión 2
+<<<<<<< HEAD
+Parrafo del master1
+=======
+Versión 3 del archivo
+Commit de la cabecera
+>>>>>>> cabecera

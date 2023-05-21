@@ -1,0 +1,33 @@
+body {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+#titulos1
+{
+    text-align: center;
+    color: #fffefe;
+    font-size: 20px;
+    background-color: rgb(20, 124, 42);
+}
+#container
+{
+    width: 70%;
+    padding: 1em;
+    text-align: left;
+    border: 1px solid #ddd;
+    margin: 0% auto;
+}
+#post h1
+{
+    font-size: 20px;
+    text-align: center;
+}
+#pie_de_pagina
+{
+    text-align: center;
+    color: #000000;
+    font-size: 12px;
+    background-color: rgb(121, 121, 121);
+}
