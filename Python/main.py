@@ -22,7 +22,7 @@ print(type(entero))
 entero=bool("")
 print(type(entero))
 print(entero)
-uso_comillas='hola2 "j1'
+uso_comillas='hola2 j1'
 print(uso_comillas)
 
 #concatenar texto y variables:
@@ -48,10 +48,20 @@ age= 23
 print("Mi edad es "+str(age))
 print(f"Mi edad es {age}")
 
-age =input("Escribe tu edad =>")
+#age =input("Escribe tu edad =>")
 print(type(age))
 age=(int(age))
 age+=10
 print(f"Tu edad en 10 años será {age}")
 print("Finalizado")
+print("Multiplica_palabras "*3) #repite las palabras por 3 veces
 
+#Operadores de comparación
+print(3>2) #true
+print(3>=2) #true
+print(3==3) #IGUAL.. TRUE
+print(3!=3) #diferente.. false
+
+print("Hola" == "hola") #da false por la mayuscula...
+print(type("hola")== type("holass"))#da true, porque es el mismo tipo
+print((1.1+2.6))
