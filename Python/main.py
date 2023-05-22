@@ -4,6 +4,16 @@ print("Asi se muestra texto")
 """
 Asi se introducen
 varias lineas
+
+operadores:
+
++ suma
+- resta
+* multiplicacion
+/ division
+% residuo
+// division con valor entero
+** exponenciación
 """
 #tipos de datos y uso
 
@@ -64,4 +74,31 @@ print(3!=3) #diferente.. false
 
 print("Hola" == "hola") #da false por la mayuscula...
 print(type("hola")== type("holass"))#da true, porque es el mismo tipo
-print((1.1+2.6))
+print(3.3==(1.1+2.2)) #da false por error de punto flotante, ver aritmetica de punto flotante
+print(format(1.1+2.2,".2g"))
+
+#Operadores logicos and y or
+
+print(True and  True) #true
+print(False and False) #false
+print(False and True) #false
+print(False or True) #true
+
+#Operador not
+
+print(not True) #False
+
+#If o condicionales
+
+if True:
+    print("Escribir")
+"""
+edad=abs(float(input("¿Cuantos años tienes?")))
+
+if edad >= 0 and edad <=20:
+    print("Eres joven")
+elif edad > 20 and edad <=60:
+    print("Eres adulto")
+else:
+    print("Estas viejo")"""
+
