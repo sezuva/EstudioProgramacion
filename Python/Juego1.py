@@ -13,10 +13,27 @@ opciones={
     "piedra":"piedra",
     "papel":"papel",
 }
-op_usuario=input("""Escoja entre piedra, papel o tijera
+
+op_usuario=(input("""Escoja entre piedra, papel o tijera
 Puede escribir la palabra o escoger 1,2 o 3 respectivamente. 
-""")
+"""))
 
-print("La computadora ha escogido "+opciones[opcion_pc])
+try:
+    if op_usuario=="1" or op_usuario=="2" or op_usuario=="3":
+        op_usuario=int(op_usuario)
 
-#if opciones[opcion_pc]==""
+    else:
+        op_usuario=op_usuario.lower()
+    print("La computadora ha escogido "+opciones[opcion_pc])
+
+    if opciones[opcion_pc]==opciones[op_usuario]:
+        print("Empataste!")
+
+    elif (opciones[opcion_pc] =="tijera" and opciones[op_usuario]=="piedra") or (opciones[opcion_pc] =="piedra" and opciones[op_usuario]=="papel") or (opciones[opcion_pc] =="papel" and opciones[op_usuario]=="tijera"):
+        print("Ganaste!")
+
+    else: 
+        print("Perdiste!")
+        
+except:
+    print("Has escogido una opción no valida")
