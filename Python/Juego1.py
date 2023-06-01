@@ -36,4 +36,4 @@ try:
         print("Perdiste!")
         
 except:
-    print("Has escogido una opción no valida")
+    print("Has escogido una opción no valida, por lo tanto la computadora gana")
