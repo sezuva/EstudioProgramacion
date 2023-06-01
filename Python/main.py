@@ -102,3 +102,9 @@ elif edad > 20 and edad <=60:
 else:
     print("Estas viejo")"""
 
+#Operador in y len
+text = "Ella sabe programar en Python"
+print("Ultimos cambios")
+print("Hola" in text) # da false porque "Hola" no está en la oración
+print("Python" in text) #da verdadero porque el operador in busca la palabra "Python" en la oración anterior
+len(text) #cuenta el numero de caracteres que tiene el texto
