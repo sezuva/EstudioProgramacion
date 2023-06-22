@@ -107,4 +107,15 @@ text = "Ella sabe programar en Python"
 print("Ultimos cambios")
 print("Hola" in text) # da false porque "Hola" no está en la oración
 print("Python" in text) #da verdadero porque el operador in busca la palabra "Python" en la oración anterior
-len(text) #cuenta el numero de caracteres que tiene el texto
+size=len(text) #cuenta el numero de caracteres que tiene el texto
+print(size)
+print(text.upper()) #transforma a MAYUSCULA
+print(text.lower()) #transforma a minuscula
+print(text.count('a')) #cuenta las "a" del texto
+print(text.swapcase()) #canbia las mayusculas por minusculas y viceversa
+print(text.startswith("Ella")) #Evalua si es la primera palabra.
+print(text.endswith("Rust")) #Evalua si termina en la palabra indicada "rust"
+print(text.replace("Ella", "YO")) # Reemplaza en el texto "Ella" por "YO"
+print(text.capitalize()) #Coloca la primera letra en mayuscula
+print(text.title()) #coloca cada primera letra de cada palabra en mayuscula.
+print(text.isdigit()) #evalua si es un dígito.
