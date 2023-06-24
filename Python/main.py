@@ -130,3 +130,8 @@ print(text[0:3]) # Da ella, porque toma las posiciones del 0 al 10
 numbers = [1,2,3,4]
 print(numbers)
 print(type(numbers))
+lista_typos=[1,True,"Texto"]
+print(type(lista_typos[0]))
+lista_typos[0]=99
+print(lista_typos)
+print("Texto" in lista_typos) #arroja verdadero si "texto" está en el array
