@@ -119,3 +119,14 @@ print(text.replace("Ella", "YO")) # Reemplaza en el texto "Ella" por "YO"
 print(text.capitalize()) #Coloca la primera letra en mayuscula
 print(text.title()) #coloca cada primera letra de cada palabra en mayuscula.
 print(text.isdigit()) #evalua si es un dígito.
+
+#--------------- Indexing and slicing
+text="Ella sabe Python"
+print(text[0]) #da E, porque es el caracter en posición 0
+print(text[-1]) #da n, porque empieza de derecha a izquierda en la posición -1 (negativa)
+print(text[0:3]) # Da ella, porque toma las posiciones del 0 al 10
+
+#----------listas
+numbers = [1,2,3,4]
+print(numbers)
+print(type(numbers))
