@@ -135,3 +135,11 @@ print(type(lista_typos[0]))
 lista_typos[0]=99
 print(lista_typos)
 print("Texto" in lista_typos) #arroja verdadero si "texto" está en el array
+numbers.append(5) #inserta elemento "5" al final de la lista
+print(numbers)
+numbers.insert(0,"0") #inserta en la posición indicada un elemento
+print(numbers)
+numbers2=[6,7,8,9]
+numbers_final=numbers+numbers2 #fusiona listas
+print(numbers_final)
+posicion=numbers_final.index(5) #arroja la posición en que se ecuentra determinado elemento de la lista.
