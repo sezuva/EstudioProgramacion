@@ -143,3 +143,29 @@ numbers2=[6,7,8,9]
 numbers_final=numbers+numbers2 #fusiona listas
 print(numbers_final)
 posicion=numbers_final.index(5) #arroja la posición en que se ecuentra determinado elemento de la lista.
+numbers2.remove(7) #remueve un elemento de la lista. Debe escribirse de acuerdo al tipo de dato..
+print(numbers2[::-1]) #invierte la lista. Tambien se puede usar reversed()
+
+#....... Tuplas (no es posible modificar los valores, es estatica)
+numbers_tupla=(1,2,3,4)
+print(type(numbers_tupla))
+numbers_tupla_a_lista=list(numbers_tupla) #se crea una lista con una tupla
+print(type(numbers_tupla_a_lista))
+
+
+#diccionarios
+diccionario={
+    1:"uno",
+    2:"dos"
+}
+
+person={
+    "name":"Sebastian",
+    "last_name":"Zuñiga",
+    "langs":["Pyhton","javascript"]
+}
+
+person["name"]="Santiago" # cambia el valor de "name" en el diccionario
+person["langs"].append("c++") #agrega a la lista que hace parte del dicionario
+del person["last_name"] #eliminó la llave y atributo en mención
+person.pop("langs") #elimina "langs" y sus atributos
