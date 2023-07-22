@@ -169,3 +169,86 @@ person["name"]="Santiago" # cambia el valor de "name" en el diccionario
 person["langs"].append("c++") #agrega a la lista que hace parte del dicionario
 del person["last_name"] #eliminó la llave y atributo en mención
 person.pop("langs") #elimina "langs" y sus atributos
+
+person={
+    "name":"Sebastian",
+    "last_name":"Zuñiga",
+    "langs":["Pyhton","javascript"]
+}
+person["twitter"]=("@nicobytes")
+print(list(person.keys())) # imprime lista de keys
+print(list(person.values())) # imprime lista de valores   
+
+# --------------------------------------
+#Ciclos while
+
+counter = 0
+while counter < 10:
+    counter +=1
+    print(counter)
+
+while counter < 20: # no para hasta que counter sea 19
+    counter +=1
+    print(counter)
+    if counter == 15: # pero si llega a 15 se hace un stop forzoso
+        break
+while counter < 30:
+    counter +=1
+    if counter <20:
+        continue
+    print(counter) #Este comando no se va a ejecutar sino hasta que ya no se cumpla el if
+
+#ciclo for
+
+for i in range(20): #ya itera 20 iteraciones, i toma valor de 0 a 19
+    print(i)
+for e in range(1,21): #itera de 1 a 21 para el elemento "e".  Estos valores son cerrados.
+    print(e)
+
+my_list = [23,45,67,89,43]
+for element in my_list:
+    print(element)
+
+product = {
+    "name": "Camisa",
+    "price": 100,
+    "stock": 89
+}
+
+for key in product:
+    print(key, "=>", product[key])
+
+for key, value in product.items():
+    print(key, "=>", value)
+
+people = [
+    {
+        "name": "Sebastian",
+        "age": 25
+    },
+    {
+        "name": "Stephany",
+        "age": 23
+    },
+    {
+        "name": "Alejandra",
+        "age": 28
+    }
+]
+
+for person in people:
+    print("name =>", person["name"])
+    
+matriz = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+print(matriz[0][1])
+
+for row in matriz:
+    print(row)
+    for column in row:
+        print(column)  # en cada lista de la lista matriz, muestra los elementos.
+
