@@ -252,3 +252,5 @@ for row in matriz:
     for column in row:
         print(column)  # en cada lista de la lista matriz, muestra los elementos.
 
+for i in range [1,3]:
+    print(i)
