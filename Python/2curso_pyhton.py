@@ -125,4 +125,92 @@ text = 'Hola, soy Sebastian'
 unique = {c: c.upper() for c in text if c in 'aeiou'}
 print(unique)
 
+#funciones
+
+def my_print(text):
+    print(text*2)
+
+my_print('Hola ')
+
+#funciones return
+sum = 0
+for x in range (1,10):
+    sum+=x
+print (sum)
+
+def sum_with_range(a,b):
+    sum = 0 # variables internas de la función.
+    for x in range (a,b):
+        sum += x
+    print(sum)
+    return sum
+
+result = sum_with_range(2,50)
+print(result)
+print(sum_with_range(2,50))
+
+#multiples return
+
+def find_volume(length=1,width=1,depth=1): #valores por defecto
+    return length * width * depth, width, "hola"
+
+result = find_volume(width=2)
+
+print(result)
+
+# the scope of variables in python, es la aplicación de la variable
+
+price = 100
+print(price) # alcance en todo el archivo
+def increment():
+    print(price) #ejemplo, se puede utilizar en una función. pero si la declaramos dentro, no es globarl
+    
+# funciones lambdas
+
+def increment(x):
+    return x + 1
+increment2 = lambda x : x + 1 #función lambda
+result = increment(10)
+print(result)
+print(increment2(10))
+
+full_name = lambda name, last_name: f'Full name es {name.title()} {last_name.title()}'
+
+text = full_name('nicolas', 'perez casas')
+print(text)
+
+#Higher order function: una función dentro de otra función
+
+def increment3(x):
+    return x + 1
+
+def high_ord_func(x,func):
+    return x + func(x)
+
+result = high_ord_func(2, increment)
+print (result)
+ 
+high_ord_func2 = lambda x, func: x + func(x) #utilizando lambda
+result = high_ord_func2(2, increment3)
+print(result)
+
+#map es transformaciones a una lista dada de elementos.
+
+numbers = [1,2,3,4]
+numbers_v2 = []
+
+for i in numbers:
+    numbers_v2.append(i*2)
+print(numbers)
+print(numbers_v2)
+
+numbers_v3 = list(map(lambda i: i*2, numbers)) #la función map asigna a lambda cada iterable de la lista numbers
+
+print(numbers_v3)
+
+numbers_1 = [1,2,3,4]
+numbers_2 = [5,6,7]
+
+result = list(map(lambda x, y: x + y, numbers_1, numbers_2)) # solo resulta una lista de 3 valores. 
+print(result)
 
