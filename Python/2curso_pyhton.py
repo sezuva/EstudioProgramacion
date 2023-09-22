@@ -214,3 +214,35 @@ numbers_2 = [5,6,7]
 result = list(map(lambda x, y: x + y, numbers_1, numbers_2)) # solo resulta una lista de 3 valores. 
 print(result)
 
+items = [
+    {
+        'product': "camisa",
+        'price': 100
+    },
+    {
+        'product': "pantalones",
+        'price': 200
+    },
+    {
+        'product': "zapatos",
+        'price': 300
+    }
+]
+
+prices = list(map(lambda item: item['price'], items))
+print(prices)
+print(items[0]['price'])
+
+def add_taxes(item):
+    item['taxes'] = item['price']*.19
+    return item
+
+new_items = list(map(add_taxes, items)) # esto hace que se modifique el array original y puede ser un comportamiento no deseado
+print(new_items)
+
+#Para que no se modifique el array original, durante la función se recomienda hacer una copia. Esto se llama mutabilidad
+
+def add_taxes2(item):
+    new_item = item.copy() # copia el diccionario pero no se trae esa referencia.
+    new_item['taxes'] = new_item['price']*.19
+    return new_item
