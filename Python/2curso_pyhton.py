@@ -246,3 +246,68 @@ def add_taxes2(item):
     new_item = item.copy() # copia el diccionario pero no se trae esa referencia.
     new_item['taxes'] = new_item['price']*.19
     return new_item
+
+#Función Filter
+
+numbers = [1,2,3,4,5,]
+new_numbers = list(filter(lambda x: x % 2 ==0, numbers)) # colocar en lista los numeros que se dividan entre 2 y de 0 de residuo
+print(new_numbers)
+
+matches = [
+  {
+    'home_team': 'Bolivia',
+    'away_team': 'Uruguay',
+    'home_team_score': 3,
+    'away_team_score': 1,
+    'home_team_result': 'Win'
+  },
+  {
+    'home_team': 'Brazil',
+    'away_team': 'Mexico',
+    'home_team_score': 1,
+    'away_team_score': 1,
+    'home_team_result': 'Draw'
+  },
+  {
+    'home_team': 'Ecuador',
+    'away_team': 'Venezuela',
+    'home_team_score': 5,
+    'away_team_score': 0,
+    'home_team_result': 'Win'
+  },
+]
+
+print(matches)
+print(len(matches))
+
+new_list = list(filter(lambda item: item['home_team_result'] == 'Win', matches))
+print(new_list)
+
+#función reduce, reduce a un solo valor
+
+import functools
+
+numbers = [1,2,3,4]
+
+result = functools.reduce(lambda counter, item: counter + item, numbers) #reduce solo utiliza dos parametros y puede iterar solo de a dos elementos por iteración
+print(result)
+
+#Módulos
+
+#Permite empezar a modular la aplicación, son los imports
+
+import sys #da información del sistema operativo
+print(sys.path)
+
+import re #expresiones regulares
+text = 'Mi número de telefono es 3113336865, el código es 57 y mi número de la suerte es 3'
+result = re.findall('[0-9]+', text)
+print(result)
+
+import time #Para horas y fechas
+timestamp = time.time() #formato maquina
+print(timestamp) 
+local= time.localtime()
+print(local) #formato estructura time
+fecha = time.asctime(local) #formato fecha ddd mmm dd hhhh
+print(fecha)
