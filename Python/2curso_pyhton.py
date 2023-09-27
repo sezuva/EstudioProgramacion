@@ -158,7 +158,7 @@ result = find_volume(width=2)
 
 print(result)
 
-# the scope of variables in python, es la aplicación de la variable
+# the scope of variables in python, es la aplicación de la variable (alcance)
 
 price = 100
 print(price) # alcance en todo el archivo
@@ -277,11 +277,12 @@ matches = [
   },
 ]
 
-print(matches)
+print('Primero ->', matches)
 print(len(matches))
 
 new_list = list(filter(lambda item: item['home_team_result'] == 'Win', matches))
 print(new_list)
+
 
 #función reduce, reduce a un solo valor
 
@@ -311,3 +312,65 @@ local= time.localtime()
 print(local) #formato estructura time
 fecha = time.asctime(local) #formato fecha ddd mmm dd hhhh
 print(fecha)
+
+import collections #utilidad para manejar listas
+numbers = [1,1,2,1,2,1,4,5,3,3,21]
+counter = collections.Counter(numbers)
+print(counter)
+
+#Creación de modulos propios
+#Cualquier archivo se puede comportar como módulo. 
+#se creara un modulo en mod.py
+
+import utils
+
+keys, values = utils.get_population()
+print(keys, values)
+
+data = [
+    {
+        'Country': 'Colombia',
+        'Population': 500
+    },
+    {
+        'Country': 'Bolivia',
+        'Population':300
+    }
+]
+result = utils.population_by_country(data,'Colombia')
+print(result)
+
+#MODULOS COMO SCRIPTS __name__ y __main__  dualidad
+
+#Si hacemos import a un archivo .py que se pueda ejecutar, se ejecutará junto con el actual desde donde estemos llamando. 
+#Esto se soluciona primero, para los archivos que se vayan a usar como modulo/script dejar su ejecución dentro de una función
+#Luego, puede que yo quiera import desde un archivo controlando lo que quiero ejecutar pero a la vez si lo ejecuto individual, se ejecute sin indicar nada. 
+#Para esto usamos if __name__ = '__main__': xxx para indicar que ejecutar cuando se llame desde la terminal.
+
+#PAQUETES packages
+'''
+from pkg.mod1 import func_1, func_2
+from pkg.mod2 import func_3, func_4
+
+print(func_1())
+print(func_2())
+print(func_3())
+print(func_4())
+#en la versión 3 de python con lo anterior era suficiente para usar un paquete
+#sin embargo, las versiones anteriores utilizaban un archivo llamado __init__.py:
+'''
+import pkg
+print(pkg.URL)
+print(pkg.mod1.func_1()) # esto solo funciona si en __init__.py hace import a todos los modulos que se requieran
+
+#iterables
+
+for i in range(1,10):
+    print(i)
+
+my_iter = iter(range (1,11))
+print(my_iter) #sale literalmente ragne (1,11) si no dejamos "iter"
+
+print(next(my_iter)) # hace que el iterable se realice "manualmente". Por cada next se hace una iteración
+print(next(my_iter))
+print(next(my_iter))
