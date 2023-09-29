@@ -374,3 +374,29 @@ print(my_iter) #sale literalmente ragne (1,11) si no dejamos "iter"
 print(next(my_iter)) # hace que el iterable se realice "manualmente". Por cada next se hace una iteración
 print(next(my_iter))
 print(next(my_iter))
+
+#Errores en Python
+#print(0/0)
+#print(hola)
+
+suma = lambda x,y: x + y
+assert suma(2,2) == 4 # puede verificar si la función es correcta y en caso contrario sale un error
+#esto se llama pruebas unitarias y hay varios metodos para hacerlas.
+
+age = 18
+
+if age < 18:
+    raise Exception('No se permite menores de edad') #lanzar un error por criterio del programa que al producirse detiene la ejecución
+
+#Manejo de errores
+try:
+    print(0/0)
+except ZeroDivisionError as error: #esto se uede hacer en cualquier parte dentro del bloque del ty
+    print(error)
+
+print('hola')
+
+#Leer un archivo de texto
+
+
+
