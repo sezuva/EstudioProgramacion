@@ -398,5 +398,32 @@ print('hola')
 
 #Leer un archivo de texto
 
+file = open('./file.txt')
+print(file.read())
+file.close() #cierra y libera espacio en memoria
 
+file = open('./file.txt')
+print(file.readline()) #linea a linea
+print(file.readline())
+print(file.readline())
 
+file.close() #cierra y libera espacio en memoria
+
+file = open('./file.txt')
+
+for line in file:
+    print(line)
+file.close()
+
+with open('./file.txt') as file: #forma para que python cierre el archivo y es la mas comun utilizada
+    for line in file: 
+        print(line)
+
+#editar archivos o escribir en uno
+with open('./file.txt','r+') as file: #el segundo argumento es el que da permisos, en este caso lectura y escritura
+    for line in file: 
+        print(line)
+    file.write('\n Nuevo texto en el archivo')
+
+#LEER CSV (VER ARCHIVO read_csv.py)
+import read_csv
