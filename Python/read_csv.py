@@ -15,3 +15,4 @@ if __name__ == '__main__':
     data = read_csv('./world_population.csv')
     print(data)
 
+
