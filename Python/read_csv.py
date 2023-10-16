@@ -6,9 +6,9 @@ def read_csv(path):
         data = []
         for row in reader:
             iterable = zip(header,row)
-            country_dict = {key: value for key, value in iterable}
+            #country_dict = {key: value for key, value in iterable}
+            country_dict = (dict(iterable))
             data.append(country_dict)
-            #country_dict = (dict(iterable)) puede ser otra poción
         return data
 
 if __name__ == '__main__':
