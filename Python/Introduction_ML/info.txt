@@ -1,0 +1,5 @@
+Nombre del curso: Introducción a la IA con Python
+Nivel: Básico
+Profesor: Rodrigo Montemayor
+Plataforma/Entidad: Domestika
+Url: https://www.domestika.org/es/courses/5239-introduccion-a-la-ia-con-python

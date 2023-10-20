@@ -1,0 +1,5 @@
+Nombre del curso: Curso de Python: Comprehensions, Funciones y Manejo de Errores
+Nivel: Básico
+Profesor: Nicolas Molina
+Plataforma/Entidad: Platzi
+Url: https://platzi.com/cursos/python-funciones/

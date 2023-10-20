@@ -1,0 +1,5 @@
+Nombre del curso: Curso de Fundamentos de Python
+Nivel: Básico
+Profesor: Nicolas Molina
+Plataforma/Entidad: Platzi
+Url: https://platzi.com/cursos/python/
