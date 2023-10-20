@@ -427,3 +427,10 @@ with open('./file.txt','r+') as file: #el segundo argumento es el que da permiso
 
 #LEER CSV (VER ARCHIVO read_csv.py)
 import read_csv
+
+def holafuncion():
+  a=1
+  b=3
+  return a, b
+hola=holafuncion()
+print(type(hola))
